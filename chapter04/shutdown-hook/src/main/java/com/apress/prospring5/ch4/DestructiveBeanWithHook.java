@@ -43,7 +43,7 @@ public class DestructiveBeanWithHook {
     public static void main(String... args) throws Exception {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("classpath:spring/app-context-annotation.xml");
-        ctx.registerShutdownHook();
+//        ctx.registerShutdownHook();//有了钩子，可以不用显示调用ctx.close();或ctx.destroy();
         ctx.refresh();
 
         ctx.getBean(DestructiveBeanWithHook.class);

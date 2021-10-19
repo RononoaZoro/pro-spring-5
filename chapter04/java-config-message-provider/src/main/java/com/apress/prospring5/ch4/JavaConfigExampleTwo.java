@@ -8,9 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class JavaConfigExampleTwo {
     public static void main(String... args) {
-        ApplicationContext ctx = new 
-            //AnnotationConfigApplicationContext(AppConfigTwo.class);
-            //AnnotationConfigApplicationContext(AppConfigThree.class);
+        ApplicationContext ctx = new
+//            AnnotationConfigApplicationContext(AppConfigTwo.class);
+//            AnnotationConfigApplicationContext(AppConfigThree.class);
             AnnotationConfigApplicationContext(AppConfigFive.class);
 
         MessageRenderer renderer =

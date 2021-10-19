@@ -69,6 +69,7 @@ include 'chapter05:static-pointcut'
 include 'chapter05:regex-pointcuts'
 include 'chapter05:simple-before-advice'
 include 'chapter05:aspectj-boot'
+//include 'chapter05-aspectj-aspects'
 
 include 'chapter06:plain-jdbc'
 include 'chapter06:spring-jdbc-annotations'

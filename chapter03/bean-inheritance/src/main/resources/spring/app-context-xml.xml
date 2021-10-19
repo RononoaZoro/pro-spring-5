@@ -8,6 +8,7 @@
 
     <bean id="parent" class="com.apress.prospring5.ch3.xml.Singer"
         p:name="John Mayer" p:age="39" />
+<!--    abstract="true"-->
     
     <bean id="child" class="com.apress.prospring5.ch3.xml.Singer"
         parent="parent" p:age="0"/>

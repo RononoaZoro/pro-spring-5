@@ -1,12 +1,14 @@
 package com.apress.prospring5.ch4;
 
 import java.io.File;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileUrlResource;
 import org.springframework.core.io.Resource;
 
 public class ResourceDemo {
-    public static void main(String... args) throws Exception{
+    public static void main(String... args) throws Exception {
         ApplicationContext ctx = new ClassPathXmlApplicationContext();
 
         File file = File.createTempFile("test", "txt");
@@ -22,9 +24,11 @@ public class ResourceDemo {
         displayInfo(res3);
     }
 
-    private static void displayInfo(Resource res) throws Exception{
+    private static void displayInfo(Resource res) throws Exception {
         System.out.println(res.getClass());
-        System.out.println(res.getURL().getContent());
+        if (!(res instanceof FileUrlResource)) {
+            System.out.println(res.getURL().getContent());//FileUrlResource不能使用getURL().getContent()
+        }
         System.out.println("");
     }
 }
