@@ -25,7 +25,7 @@ public class AppConfig {
 	private String driverClassName;
 	@Value("${url}")
 	private String url;
-	@Value("${username}")
+	@Value("${user}")
 	private String username;
 	@Value("${password}")
 	private String password;

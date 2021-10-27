@@ -24,7 +24,7 @@ import static org.junit.Assert.assertTrue;
  * Observation: before running these tests make sure to have the MySQL database
  * in the initial state defined in the SQL scripts. Comment the `@Ignore` annotation and run.
  */
-@Ignore
+//@Ignore
 public class AnnotationJdbcTest {
 
 	private GenericApplicationContext ctx;

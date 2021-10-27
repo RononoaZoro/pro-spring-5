@@ -28,6 +28,7 @@ public class AppConfig {
 	@Bean ProxyFactoryBean bean() {
 		ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
 		proxyFactoryBean.setTarget(guitarist());
+		//cglib代理 设置是否直接代理目标类，false表示直接代理特定接口
 		proxyFactoryBean.setProxyTargetClass(true);
 		proxyFactoryBean.addAdvisor(advisor());
 		return proxyFactoryBean;

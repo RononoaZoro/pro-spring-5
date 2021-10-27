@@ -8,6 +8,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
  * Created by iuliana.cosmina on 4/9/17.
  */
 public class ComplexAdvice {
+	//默认情况下前置通知优先于环绕通知的执行
 	public void simpleBeforeAdvice(JoinPoint joinPoint, Guitar value) {
 		if(value.getBrand().equalsIgnoreCase("Gibson")) {
 			System.out.println("Executing: " +

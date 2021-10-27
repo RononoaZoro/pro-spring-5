@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by iuliana.cosmina on 4/14/17.
  */
-@Ignore  // requires a mysql database
+//@Ignore  // requires a mysql database
 public class DbConfigTest {
 
 	private static Logger logger = LoggerFactory.getLogger(DbConfigTest.class);

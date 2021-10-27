@@ -29,7 +29,7 @@ public class SingerJobResults {
 			try {
 				BasicDataSource dataSource = new BasicDataSource();
 				dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-				dataSource.setUrl("jdbc:mysql://localhost:3306/xd?useSSL=true");
+				dataSource.setUrl("jdbc:mysql://192.168.2.241:3306/xd?useSSL=true");
 				dataSource.setUsername("xd");
 				dataSource.setPassword("xd");
 				return dataSource;

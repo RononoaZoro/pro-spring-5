@@ -7,12 +7,12 @@ public class AgentAOPDemo {
         Agent target = new Agent();
 
         ProxyFactory pf = new ProxyFactory();
-        pf.addAdvice(new AgentDecorator());
+        pf.addAdvice(new SimpleBeforeAdvice());
         pf.setTarget(target);
 
         Agent proxy = (Agent) pf.getProxy();
 
-        target.speak();
+//        target.speak();
         System.out.println("");
         proxy.speak();
     }

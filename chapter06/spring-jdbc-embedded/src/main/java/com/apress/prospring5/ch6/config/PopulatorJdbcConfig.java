@@ -2,6 +2,7 @@ package com.apress.prospring5.ch6.config;
 
 import com.apress.prospring5.ch6.CleanUp;
 import com.apress.prospring5.ch6.JdbcSingerDao;
+import com.apress.prospring5.ch6.MySQLErrorCodesTranslator;
 import com.apress.prospring5.ch6.dao.SingerDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,7 +83,11 @@ public class PopulatorJdbcConfig {
 
 	@Bean
 	public JdbcTemplate jdbcTemplate() {
-		return new JdbcTemplate(dataSource());
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource());
+//		MySQLErrorCodesTranslator translator = new MySQLErrorCodesTranslator();
+//		translator.setDataSource(dataSource());
+//		jdbcTemplate.setExceptionTranslator(translator);
+		return jdbcTemplate;
 	}
 
 	@Bean(destroyMethod = "destroy")

@@ -16,6 +16,7 @@ public class IntroductionDemo {
         ProxyFactory pf = new ProxyFactory();
         pf.setTarget(target);
         pf.addAdvisor(advisor);
+        //使用cglib代理方式，默认jdk代理
         pf.setOptimize(true);
 
         Contact proxy = (Contact) pf.getProxy();
