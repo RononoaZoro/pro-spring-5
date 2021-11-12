@@ -56,12 +56,22 @@ public class SingerAudit extends AuditableEntity<SingerAudit> {
 		this.birthDate = birthDate;
 	}
 
+	public int getVersion() {
+		return version;
+	}
 
+	public void setVersion(int version) {
+		this.version = version;
+	}
+
+	@Override
 	public String toString() {
-		return "Singer - Id: " + id + ", First name: " + firstName
-				+ ", Last name: " + lastName + ", Birthday: " + birthDate
-				+ ", Created by: " + createdBy + ", Create date: " + createdDate
-				+ ", Modified by: " + lastModifiedBy + ", Modified date: "
-				+ lastModifiedDate;
+		return "SingerAudit{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", birthDate=" + birthDate +
+				", version=" + version +
+				'}';
 	}
 }

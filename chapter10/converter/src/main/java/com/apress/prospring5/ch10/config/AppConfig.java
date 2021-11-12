@@ -45,6 +45,10 @@ public class AppConfig {
 		return singer;
 	}
 
+	/**
+	 * 指定spring使用Converter的类型转换辞退，没有conversionService的话，会默认使用 PropertyEditor
+	 * @return
+	 */
 	@Bean
 	public ConversionServiceFactoryBean conversionService() {
 		ConversionServiceFactoryBean conversionServiceFactoryBean = new ConversionServiceFactoryBean();

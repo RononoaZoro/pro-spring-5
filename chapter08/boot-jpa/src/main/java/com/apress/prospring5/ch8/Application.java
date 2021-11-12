@@ -29,6 +29,7 @@ public class Application implements CommandLineRunner {
 		ctx.close();
 	}
 
+	//当实现 CommandLineRunner 接口的bean被包含在 spring 容器中时，启动 spring boot 容器时，可以自动调用 run 方法
 	@Transactional(readOnly = true)
 	@Override public void run(String... args) throws Exception {
 		List<Singer> singers = singerRepository.findByFirstName("John");

@@ -24,6 +24,7 @@ public class SpringValidatorDemo {
 		singer.setLastName("Mayer");
 
 		Validator singerValidator = ctx.getBean("singerValidator", Validator.class);
+		//保存验证结果
 		BeanPropertyBindingResult result = new BeanPropertyBindingResult(singer, "John");
 
 		ValidationUtils.invokeValidator(singerValidator, singer, result);

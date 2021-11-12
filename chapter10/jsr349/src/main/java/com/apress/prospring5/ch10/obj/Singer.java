@@ -11,7 +11,7 @@ public class Singer {
 
     private String lastName;
 
-    @NotNull
+    @NotNull(message = "genre can not benull")
     private Genre genre;
 
     private Gender gender;

@@ -14,6 +14,7 @@ public class Singer {
 	private String lastName;
 	@NotNull
 	private Genre genre;
+	@NotNull
 	private Gender gender;
 
 	public String getFirstName() {
