@@ -31,6 +31,7 @@ public class RestClientConfig {
 
 	@Autowired ApplicationContext ctx;
 
+	//这个是有问题的，鉴权查不到该用户 todo
 	@Bean Credentials credentials(){
 		return new UsernamePasswordCredentials("prospring5", "prospring5");
 	}

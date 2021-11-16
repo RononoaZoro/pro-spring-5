@@ -17,6 +17,11 @@ import java.text.SimpleDateFormat;
 @Entity
 @Table(name="car")
 public class Car {
+
+    public Car() {
+        System.out.println();
+    }
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "ID")

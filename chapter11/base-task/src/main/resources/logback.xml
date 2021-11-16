@@ -2,12 +2,13 @@
 <configuration>
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
-        <resetJUL>true</resetJUL>
+        <resetJUL>false</resetJUL>
     </contextListener>
 
+<!--    https://blog.csdn.net/weixin_40295575/article/details/106265835 日志打印缩写报名-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
 

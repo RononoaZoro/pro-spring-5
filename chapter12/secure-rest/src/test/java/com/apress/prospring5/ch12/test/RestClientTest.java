@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
@@ -25,7 +26,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by iuliana.cosmina on 6/17/17.
  */
-@Ignore
+//@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {RestClientConfig.class})
 public class RestClientTest {
@@ -45,9 +46,14 @@ public class RestClientTest {
 	}
 
 	@Test
-	public void testFindAll() {
+	public void testFindAll1() {
 		logger.info("--> Testing retrieve all singers");
-		Singers singers = restTemplate.getForObject(URL_GET_ALL_SINGERS, Singers.class);
+		Singers singers = null;
+		try {
+			singers = restTemplate.getForObject(URL_GET_ALL_SINGERS, Singers.class);
+		} catch (RestClientException e) {
+			e.printStackTrace();
+		}
 		assertTrue(singers.getSingers().size() == 3);
 		listSingers(singers);
 	}
