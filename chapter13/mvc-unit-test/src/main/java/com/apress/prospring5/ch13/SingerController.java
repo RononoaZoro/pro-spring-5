@@ -25,6 +25,7 @@ public class SingerController {
     @ResponseBody
     public Singers listData() {
         return new Singers(singerService.findAll());
+
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
